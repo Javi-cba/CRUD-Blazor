@@ -1,0 +1,124 @@
+﻿@page "/articulos/aggMod/{artCodNum:int?}"
+
+@inject NavigationManager NavigationManager
+@inject ArticuloService ArticuloService
+@inject SweetAlertService Swal;
+
+
+<h3>@(artCodNum.HasValue ? "Editar Artículo" : "Nuevo Artículo")</h3>
+
+@if (articulo != null)
+{
+    <EditForm Model="articulo" OnValidSubmit="HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="form-group">
+            <label for="descripcion">Descripción</label>
+            <InputText id="descripcion" class="form-control" @bind-Value="articulo.art_descri" />
+        </div>
+        <div class="form-group">
+            <label for="codigoBarra">Código de Barra</label>
+            <InputText id="codigoBarra" class="form-control" @bind-Value="articulo.art_codbarra" />
+        </div>
+        <div class="form-group">
+            <label for="precioUnitario">Precio Unitario</label>
+            <InputNumber id="precioUnitario" class="form-control" @bind-Value="articulo.art_precUnit" />
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3">Guardar</button>
+    </EditForm>
+}
+else
+{
+    <p>Cargando artículo...</p>
+}
+
+<button class="btn btn-secondary mt-3" @onclick="BackToList">Volver</button>
+
+@code {
+    [Parameter] public int? artCodNum { get; set; } = null;
+
+    private MArticulo articulo;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (artCodNum.HasValue)
+        {
+            try
+            {
+                // Consultamos el artículo por su código si hay ID
+                articulo = await ArticuloService.GetArticuloById(artCodNum.Value);
+            }
+            catch (Exception ex)
+            {
+                await Swal.FireAsync(new SweetAlertOptions
+                    {
+                        Title = "Error",
+                        Text = ex.Message,
+                        Icon = SweetAlertIcon.Error,
+                        ConfirmButtonText = "OK"
+                    });
+
+                NavigationManager.NavigateTo("/articulos");
+            }
+        
+        }
+        else
+        {
+            // Inicializamos un nuevo artículo si no hay ID
+            articulo = new MArticulo();
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        if (artCodNum.HasValue)
+        {
+           
+            try
+            {
+                // Si hay ID, actualizamos el artículo (PUT)
+                await ArticuloService.UpdateArticulo(articulo);
+            }
+            catch (Exception ex)
+            {
+                await Swal.FireAsync(new SweetAlertOptions
+                    {
+                        Title = "Error",
+                        Text = ex.Message,
+                        Icon = SweetAlertIcon.Error,
+                        ConfirmButtonText = "OK"
+                    });
+            }
+        }
+        else
+        {
+           
+            try
+            {
+                // Si no hay ID, creamos un nuevo artículo (POST)
+                await ArticuloService.CreateArticulo(articulo);
+            }
+            catch (Exception ex)
+            {
+                await Swal.FireAsync(new SweetAlertOptions
+                    {
+                        Title = "Error",
+                        Text = ex.Message,
+                        Icon = SweetAlertIcon.Error,
+                        ConfirmButtonText = "OK"
+                    });
+                return;
+            }
+        }
+
+        // Navegar de regreso a la lista de artículos
+        NavigationManager.NavigateTo("/articulos");
+    }
+
+    private void BackToList()
+    {
+        NavigationManager.NavigateTo("/articulos");
+    }
+}

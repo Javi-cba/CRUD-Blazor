@@ -1,0 +1,116 @@
+[
+  {
+    "ContainingType": "ApiArticulos.Controllers.CtrlArticulo",
+    "Method": "AggArt",
+    "RelativePath": "AggArt/{art_descri}/{art_precUnit}/{art_fecVenc}/{art_codbarra}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "art_descri",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "art_precUnit",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "art_fecVenc",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "art_codbarra",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiArticulos.Controllers.CtrlArticulo",
+    "Method": "Articulos",
+    "RelativePath": "ListarArt/{tipobusqueda}/{aux}/{habilitado}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipobusqueda",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "aux",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "habilitado",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiArticulos.Controllers.CtrlArticulo",
+    "Method": "ModArt",
+    "RelativePath": "ModArt",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "obj",
+        "Type": "ApiArticulos.Models.MArticulo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiArticulos.Controllers.CtrlArticulo",
+    "Method": "ModVigArt",
+    "RelativePath": "ModVigArt/{art_codnum}/{art_vigencia}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "art_codnum",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "art_vigencia",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiArticulos.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ApiArticulos.WeatherForecast, ApiArticulos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

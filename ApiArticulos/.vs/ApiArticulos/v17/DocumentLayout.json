@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\ints 2024\\GITHUB_PORFOLIO\\BlazorCrudFullStack\\ApiArticulos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3893AC08-D6E3-4D46-A96B-6EA3CA987ACB}|ApiArticulos.csproj|c:\\users\\usuario\\onedrive\\escritorio\\ints 2024\\github_porfolio\\blazorcrudfullstack\\apiarticulos\\controllers\\ctrlarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3893AC08-D6E3-4D46-A96B-6EA3CA987ACB}|ApiArticulos.csproj|solutionrelative:controllers\\ctrlarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3893AC08-D6E3-4D46-A96B-6EA3CA987ACB}|ApiArticulos.csproj|c:\\users\\usuario\\onedrive\\escritorio\\ints 2024\\github_porfolio\\blazorcrudfullstack\\apiarticulos\\data\\da_articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3893AC08-D6E3-4D46-A96B-6EA3CA987ACB}|ApiArticulos.csproj|solutionrelative:data\\da_articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3893AC08-D6E3-4D46-A96B-6EA3CA987ACB}|ApiArticulos.csproj|c:\\users\\usuario\\onedrive\\escritorio\\ints 2024\\github_porfolio\\blazorcrudfullstack\\apiarticulos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3893AC08-D6E3-4D46-A96B-6EA3CA987ACB}|ApiArticulos.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3893AC08-D6E3-4D46-A96B-6EA3CA987ACB}|ApiArticulos.csproj|c:\\users\\usuario\\onedrive\\escritorio\\ints 2024\\github_porfolio\\blazorcrudfullstack\\apiarticulos\\data\\conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3893AC08-D6E3-4D46-A96B-6EA3CA987ACB}|ApiArticulos.csproj|solutionrelative:data\\conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3893AC08-D6E3-4D46-A96B-6EA3CA987ACB}|ApiArticulos.csproj|c:\\users\\usuario\\onedrive\\escritorio\\ints 2024\\github_porfolio\\blazorcrudfullstack\\apiarticulos\\models\\marticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3893AC08-D6E3-4D46-A96B-6EA3CA987ACB}|ApiArticulos.csproj|solutionrelative:models\\marticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConexionBD.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\ints 2024\\GITHUB_PORFOLIO\\BlazorCrudFullStack\\ApiArticulos\\Data\\ConexionBD.cs",
+              "RelativeDocumentMoniker": "Data\\ConexionBD.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\ints 2024\\GITHUB_PORFOLIO\\BlazorCrudFullStack\\ApiArticulos\\Data\\ConexionBD.cs",
+              "RelativeToolTip": "Data\\ConexionBD.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T19:06:12.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\ints 2024\\GITHUB_PORFOLIO\\BlazorCrudFullStack\\ApiArticulos\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\ints 2024\\GITHUB_PORFOLIO\\BlazorCrudFullStack\\ApiArticulos\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAB6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-23T18:09:35.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MArticulo.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\ints 2024\\GITHUB_PORFOLIO\\BlazorCrudFullStack\\ApiArticulos\\Models\\MArticulo.cs",
+              "RelativeDocumentMoniker": "Models\\MArticulo.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\ints 2024\\GITHUB_PORFOLIO\\BlazorCrudFullStack\\ApiArticulos\\Models\\MArticulo.cs",
+              "RelativeToolTip": "Models\\MArticulo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-23T19:32:04.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DA_Articulo.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\ints 2024\\GITHUB_PORFOLIO\\BlazorCrudFullStack\\ApiArticulos\\Data\\DA_Articulo.cs",
+              "RelativeDocumentMoniker": "Data\\DA_Articulo.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\ints 2024\\GITHUB_PORFOLIO\\BlazorCrudFullStack\\ApiArticulos\\Data\\DA_Articulo.cs",
+              "RelativeToolTip": "Data\\DA_Articulo.cs",
+              "ViewState": "AQIAAIkAAAAAAAAAAAAwwJwAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T20:14:21.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CtrlArticulo.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\ints 2024\\GITHUB_PORFOLIO\\BlazorCrudFullStack\\ApiArticulos\\Controllers\\CtrlArticulo.cs",
+              "RelativeDocumentMoniker": "Controllers\\CtrlArticulo.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\ints 2024\\GITHUB_PORFOLIO\\BlazorCrudFullStack\\ApiArticulos\\Controllers\\CtrlArticulo.cs",
+              "RelativeToolTip": "Controllers\\CtrlArticulo.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAowBkAAABfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T20:13:58.128Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+﻿@page "/articulos"
+
+@inject SweetAlertService Swal;
+@inject ArticuloService ArticuloService
+@inject NavigationManager NavigationManager
+
+
+<PageTitle>Artículos</PageTitle>
+
+@if (articulos == null)
+{
+    <p><em>Cargando...</em></p>
+}
+else
+{
+    <div class="container mt-4">
+        <h2 class="mb-4">Lista de Artículos</h2>
+    
+        <NavLink class="nav-link" href="articulos/aggMod">
+            <button class="btn btn-secondary">
+                <i class="fas fa-trash"></i> Crear Nuevo
+            </button>
+        </NavLink>
+
+        <table class="table table-striped table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Codigo</th>
+                    <th>Descripción</th>
+                    <th>Código de Barra</th>
+                    <th>Precio Unitario</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var articulo in articulos)
+                {
+                    <tr>
+                        <td>@articulo.art_codnum</td>
+                        <td>@articulo.art_descri</td>
+                        <td>@articulo.art_codbarra</td>
+                        <td>@articulo.art_precUnit</td>
+                        <td class="text-center">
+                            <button class="btn btn-sm btn-primary" @onclick="() => UpdateArticulo(articulo.art_codnum)">
+                                <i class="fas fa-edit"></i> Editar
+                            </button>
+                            <button class="btn btn-sm btn-danger ms-2" @onclick="() => DeleteArticulo(articulo.art_codnum)">
+                                <i class="fas fa-trash"></i> Eliminar
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+}
+
+@code {
+    private List<MArticulo> articulos = new List<MArticulo>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            articulos = await ArticuloService.GetArticulos();
+        } 
+        catch (Exception ex)
+        {
+            await Swal.FireAsync(new SweetAlertOptions
+            {
+                Title = "Error",
+                Text = ex.Message,
+                Icon = SweetAlertIcon.Error,
+                ConfirmButtonText = "OK"
+            });
+        }
+
+
+    }
+
+   
+
+    private void UpdateArticulo(int art_codnum)
+    {
+        NavigationManager.NavigateTo($"/articulos/aggMod/{art_codnum}");
+    }
+
+    private async void DeleteArticulo(int codnum)
+    {
+        try
+        {
+            await ArticuloService.DeleteArticulo(codnum);
+
+            articulos = articulos.Where(a => a.art_codnum != codnum).ToList();
+        }
+        catch (Exception ex)
+        {
+            await Swal.FireAsync(new SweetAlertOptions
+            {
+                Title = "Error",
+                Text = ex.Message,
+                Icon = SweetAlertIcon.Error,
+                ConfirmButtonText = "OK"
+            });
+        }
+
+      
+    }
+}
