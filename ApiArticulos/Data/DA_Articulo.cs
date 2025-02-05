@@ -18,8 +18,7 @@ namespace ApiArticulos.Data
                 var cmd = new SqlCommand($"SELECT art_codnum,art_descri,art_codbarra,CAST(art_precUnit AS DECIMAL(10, 2))as art_precUnit " +
                     $"FROM Articulo WHERE art_vigencia=1 ORDER BY art_codnum DESC",con);
                     var dr = cmd.ExecuteReader();
-                    if (dr.Read())
-                    {
+                    
                         while (dr.Read())
                         {
                             MArticulo MArticulo = new MArticulo()
@@ -32,7 +31,7 @@ namespace ApiArticulos.Data
                             };
                             listaArticulos.Add(MArticulo);
                         }
-                    }
+                    
                 return listaArticulos;
 
             }
