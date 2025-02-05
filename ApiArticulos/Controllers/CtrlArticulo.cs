@@ -10,6 +10,16 @@ namespace ApiArticulos.Controllers
    
     public class CtrlArticulo : ControllerBase
     {
+     [HttpGet]
+        [Route("")]
+        [EnableCors("AllowBlazorApp")]
+        public IActionResult indexRoute()
+        {     
+           
+           return StatusCode(StatusCodes.Status200OK, new { message = $"TODO OK!" });
+           
+        }
+        
         [HttpGet]
         [Route("art/listado")]
         [EnableCors("AllowBlazorApp")]
@@ -23,7 +33,7 @@ namespace ApiArticulos.Controllers
             catch (Exception ex)
             {
                 Console.WriteLine(ex.StackTrace);
-                return StatusCode(StatusCodes.Status500InternalServerError, new { message = $"  });
+                return StatusCode(StatusCodes.Status500InternalServerError, new { message = $"Error al buscar artículos: {ex.Message}" });
             }
         }
 
