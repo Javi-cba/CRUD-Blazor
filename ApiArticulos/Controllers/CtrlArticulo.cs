@@ -10,7 +10,7 @@ namespace ApiArticulos.Controllers
    
     public class CtrlArticulo : ControllerBase
     {
-     [HttpGet]
+        [HttpGet]
         [Route("")]
         [EnableCors("AllowBlazorApp")]
         public IActionResult indexRoute()
